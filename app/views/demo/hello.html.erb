@@ -1,0 +1,44 @@
+<h1>Demo#hello</h1>
+<p>Find me in app/views/demo/index.html.erb</p>
+<p>Hello from hello!</p>
+<p>
+	<h2>Add 1+1</h2>
+	<% 1+ 1 %>
+	<%= 1+ 1 %>
+	<br />
+
+	<h2>Output a variable from the template</h2>
+	<% target="World" %>
+	<%= "Hello #{target}" %>
+	<br />
+
+	<h2>Output an instance variable from the controller</h2>
+	<% @numbers.each do |n|%>
+		<%= n %><br />
+	<% end %>
+
+	<h2>Links</h2>
+	<a href="/demo/index">Go to Index (a tag)</a><br />
+	<%= link_to('Go to Index (controller hash)', {:action => 'index'})%>
+	<br />
+
+	<h2>Printing Params</h2>
+	<p>Parses the page param in localhost/demo/hello?page=1</p>
+	id: <%= "#{@id}"%><br />
+	page: <%= "#{@page}"%><br />
+	<h3>calculate in controller</h3>
+	next page: <%= "#{@next_page}"%><br />
+	previous page: <%= "#{@prev_page}"%><br />
+	<h3>calculate in template</h3>
+	next page: <%= "#{@page.to_i + 1}"%><br />
+	previous page: <%= "#{@page.to_i - 1}"%><br />
+	<br />
+
+	<hr />
+	<h1>Printing params.inspect</h1>
+	<%= params.inspect %>
+
+
+
+
+</p>

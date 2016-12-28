@@ -1,0 +1,16 @@
+<h1>Demo#index</h1>
+<p>Find me in app/views/demo/index.html.erb</p>
+<p>Hello from index!</p>
+
+<h2>Links</h2>
+<a href="/demo/hello">Go to Hello (a tag)</a><br />
+<%= link_to('Go to Hello (controller hash)', {:action => 'hello'})%><br />
+<%= link_to('Hello with params', {
+	:action => 'hello',
+	:page => '5',
+	:id => '20'
+	})%><br />
+<%= link_to('Roar', '#', :onclick => "jsRoar('JavaScript'); return true;") %>
+
+
+
