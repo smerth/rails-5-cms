@@ -153,3 +153,7 @@ rails db:seed
 
 ## Deployment instructions
 
+
+## Version History
+
+released version 1.0.0 - completed tutorial cms
